@@ -1,0 +1,26 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Effect": "Allow",
+        "Principal": {
+          "AWS": "arn:aws:iam::{account-id}:root"
+        },
+        "Action": "es:*",
+        "Resource": "arn:aws:es:eu-west-1:{account-id}:domain/test-domain/*"
+      },
+      {
+        "Effect": "Allow",
+        "Principal": {
+          "AWS": "*"
+        },
+        "Action": "es:*",
+        "Resource": "arn:aws:es:eu-west-1:{account-id}:domain/test-domain/*",
+        "Condition": {
+          "IpAddress": {
+            "aws:SourceIp": "{ip-address}"
+          }
+        }
+      }
+    ]
+  }
