@@ -11,7 +11,7 @@
   "dependencies": {
     "@acuris/aws-es-connection": "^1.0.1",
     "@elastic/elasticsearch": "^7.5.0",
-    "aws-sdk": "^2.603.0",
+    "aws-sdk": "^2.814.0",
     "faker": "^4.1.0"
   }
 }
